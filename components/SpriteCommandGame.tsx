@@ -14,7 +14,7 @@ const SpriteCommandGame = () => {
   const [commandHistory, setCommandHistory] = useState([
     { type: 'system', text: 'Game started! Enter a command to begin.' }
   ]);
-  const historyRef = useRef(null);
+  const historyRef = useRef<HTMLDivElement>(null);
 
   // Auto-scroll to bottom of history
   useEffect(() => {
@@ -23,7 +23,7 @@ const SpriteCommandGame = () => {
     }
   }, [commandHistory]);
 
-  const parseCommand = (text) => {
+  const parseCommand = (text: string): string => {
     const lowercaseText = text.toLowerCase().trim();
     
     // Bounce synonyms
@@ -89,7 +89,7 @@ const SpriteCommandGame = () => {
     return 'unknown';
   };
 
-  const executeAction = (action, originalInput) => {
+  const executeAction = (action: string, originalInput: string) => {
     if (action === 'unknown') {
       setMessage('iz dunno what u talk boot');
       setCommandHistory(prev => [...prev, 
@@ -300,7 +300,7 @@ const SpriteCommandGame = () => {
     setInputText('');
   };
 
-  const handleKeyPress = (e) => {
+  const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
       handleSubmit();
     }
@@ -620,4 +620,4 @@ const SpriteCommandGame = () => {
   );
 };
 
-export default SpriteCommandGame;
+export default SpriteCommandGame; 
