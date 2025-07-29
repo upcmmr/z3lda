@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import SpriteCommandGame from '@/components/SpriteCommandGame'
+import SpriteCommandGame from '../components/SpriteCommandGame'
 
 export default function Home() {
   return (
