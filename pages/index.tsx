@@ -8,7 +8,6 @@ export default function Home() {
         <title>Z3lda - Sprite Command Game</title>
         <meta name="description" content="An interactive sprite command game" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <SpriteCommandGame />
     </>
